@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오</title>
+  </head>
+  <body>
+    <main id="main">
+      <div id="horizontality__wrap">
+        <section id="section1">
+          <div class="start__img">
+           <div class="portcircle"><p>PORTFOILO</p></div>
+          </div>
+          <div class="intro__desc">
+            <p> 어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+           </div>
+        </section>
+        <section id="section2">2</section>
+        <section id="section3">3</section>
+        <section id="section4">4</section>
+        <section id="section5">5</section>
+        <section id="section6">6</section>
+        <section id="section7">7</section>
+        <section id="section8">8</section>
+        <section id="section9">9</section>
+        <section id="section10">10</section>
+        <section id="section11">11</section>
+        <section id="section12">12</section>
+      </div>
+    </main>
+    <script type="module" src="/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+      const horizon = document.querySelector("#horizontality__wrap");
+      const section = gsap.utils.toArray("#horizontality__wrap > section");
+
+      gsap.to(section,{
+          xPercent: -100 * (section.length - 1),
+          ease: "none",
+          horizontal: true,
+
+          scrollTrigger: {
+              trigger: horizon,
+              // horizontal: true,
+              start: "top top",
+              end: () => "+=" + (horizon.offsetWidth - innerWidth),
+              pin: true,
+              anticipatePin:1,
+              scrub:1,
+              snap : {
+                  snapTo: 1/(section.length - 1),
+                  inertoa: false,
+                  duration: {min:0.1, max: 0.1}
+              },
+              invalidateOnRefresh: true
+
+          }
+      })
+    </script>
+    <script>
+      function scroll(){
+            let scrollTop = window.pageXOffset
+            console.log(scrollTop)
+              const target1 = item.querySelector("section");
+
+              let offset1 = (scrollTop - item.offsetLeft) * 0.1;
+
+              gsap.to(target1, {duration: .3, y:offset1})
+            requestAnimationFrame(scroll);
+        }
+        scroll()
+
+    </script>
+  </body>
+</html>

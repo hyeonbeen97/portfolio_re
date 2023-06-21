@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+//setting
+@import "setting/fonts.scss";
+@import "setting/base.scss";
+@import "setting/mixins.scss";
+
+//공통요소
+@import "commons/commons.scss";
+
+//섹션
+@import "section/section_common.scss";
+@import "section/section1.scss";
+@import "section/section2.scss";
+@import "section/section3.scss";
+@import "section/section4.scss";
+

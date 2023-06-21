@@ -1,0 +1,28 @@
+#section1 {
+    .start__img {
+        width: 30%;
+        height: 70%;
+        background-image: url(../src/assets/images/section1/main_frist_img.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .portcircle {
+        font-family: "Cormorant Garamond";
+        text-align: center;
+        position: absolute; 
+        right: -18%;
+        bottom: -18%;     
+        width: 14vw;
+        height: 14vw;
+        border-radius: 50%;
+        background-color: #000;
+        padding-top: 20%;
+
+        p {
+            color: #ffffff;
+            font-size: 1.2em;
+            
+        }
+    }
+}
