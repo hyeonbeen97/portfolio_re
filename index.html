@@ -10,14 +10,29 @@
     <main id="main">
       <div id="horizontality__wrap">
         <section id="section1">
-          <div class="start__img">
+          <div class="section1__inner">
+            <div class="start__img"></div>
            <div class="portcircle"><p>PORTFOILO</p></div>
           </div>
           <div class="intro__desc">
             <p> 어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+            <div class="intro__edesc">
+              <p> I think that if you work hard and enjoy anything, the result will shine. I will become a developer who deeply engraves the passion and challenging spirit of a newcomer, maintains humility in learning, and digs into details.</p>
+             </div>
            </div>
         </section>
-        <section id="section2">2</section>
+        <section id="section2">
+          <div class="intro__text" id="intro__text">
+            <p>
+                I AM<br>
+              <em>FRONTEND</em>
+              <span>DEVELOPER</span>
+            </p>
+            <div class="porofile__img">
+              <img src="./src/assets/images/section2/myintro.jpg" alt="porofile__img">
+            </div>
+          </div>
+        </section>
         <section id="section3">3</section>
         <section id="section4">4</section>
         <section id="section5">5</section>
@@ -50,29 +65,31 @@
               pin: true,
               anticipatePin:1,
               scrub:1,
-              snap : {
-                  snapTo: 1/(section.length - 1),
-                  inertoa: false,
-                  duration: {min:0.1, max: 0.1}
-              },
+              // snap : {
+              //     snapTo: 1/(section.length - 1),
+              //     inertoa: false,
+              //     duration: {min:0.1, max: 0.1}
+              // },
               invalidateOnRefresh: true
 
           }
       })
     </script>
     <script>
-      function scroll(){
-            let scrollTop = window.pageXOffset
-            console.log(scrollTop)
-              const target1 = item.querySelector("section");
+window.onload = function() {
+  // 스크롤 이벤트 발생 시 실행될 함수
+  function scrollHandler() {
+    let scrollTop = window.pageYOffset;
 
-              let offset1 = (scrollTop - item.offsetLeft) * 0.1;
+    gsap.to("#section1 .section1__inner .start__img", {
+      duration: 0.3,
+      y: -scrollTop * 0.5
+    });
+  }
 
-              gsap.to(target1, {duration: .3, y:offset1})
-            requestAnimationFrame(scroll);
-        }
-        scroll()
-
+  // 스크롤 이벤트를 감지하여 scrollHandler 함수 호출
+  window.addEventListener("scroll", scrollHandler);
+};
     </script>
   </body>
 </html>
