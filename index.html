@@ -9,51 +9,71 @@
   <body>
     <main id="main">
       <div id="horizontality__wrap">
-        <section id="section1">
-          <div class="section1__inner">
-            <div class="start__img"></div>
-           <div class="portcircle"><p>PORTFOILO</p></div>
-          </div>
-          <div class="intro__desc">
-            <p> 어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
-            <div class="intro__edesc">
-              <p> I think that if you work hard and enjoy anything, the result will shine. I will become a developer who deeply engraves the passion and challenging spirit of a newcomer, maintains humility in learning, and digs into details.</p>
-             </div>
-           </div>
-        </section>
-        <section id="section2">
-          <div class="intro__text" id="intro__text">
-            <p>
-                I AM<br>
-              <em>FRONTEND</em>
-              <span>DEVELOPER</span>
-            </p>
-            <div class="porofile__img">
-              <img src="./src/assets/images/section2/myintro.jpg" alt="porofile__img">
+        <section id="section1" class="item">
+          <div class="start__img"></div>
+          <div class="circle">POTOFOLIO</div>
+          <div class="start__desc">
+            <div class="desc">
+              <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+              <span>I think that if you work hard and enjoy anything, the result will shine. I will become a developer who deeply engraves the passion and challenging spirit of a newcomer, maintains humility in learning, and digs into details.</span>
             </div>
+          </div> 
+          <div class="text__wrap">
+            <div>I AM</div>
+            <div>frontend</div> 
+            <div>DEVELOPER</div>
+          </div>   
+          <div class="profile__img"></div>      
+        </section>
+        <section id="section2" class="item">
+          <div class="intro__text">
+            안녕하세요  신입 웹  퍼블리셔 김현빈 입니다. 
+저는 디자인을 전공하였고 많은 흥미를 느꼈습니다. 하지만 웹에 있어 디자인만으로는 웹을 만드는것과 전혀 다르단걸 느끼고 코딩 공부를시작 했습니다. 
+디자인과 코딩을 배움으로써 디자이너와 퍼블리셔, 개발자 각각의 입장을 느끼는 동시에 두 분야가 나눠져 있지만 또 그렇지도 않다고 많이 느꼈습니다.
+저에게 있어 디자인과 코딩 둘 다 상상한것을 현실로 만드는 매력적인 일이라고 생각합니다.
+
           </div>
         </section>
-        <section id="section3">3</section>
-        <section id="section4">4</section>
-        <section id="section5">5</section>
-        <section id="section6">6</section>
-        <section id="section7">7</section>
-        <section id="section8">8</section>
-        <section id="section9">9</section>
-        <section id="section10">10</section>
-        <section id="section11">11</section>
-        <section id="section12">12</section>
+        <section id="section3" class="item">3</section>
+        <section id="section4" class="item">4</section>
+        <section id="section5" class="item">5</section>
+        <section id="section6" class="item">6</section>
+        <section id="section7" class="item">7</section>
+        <section id="section8" class="item">8</section>
+        <section id="section9" class="item">9</section>
       </div>
     </main>
     <script type="module" src="/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+
     <script>
+      const lenis = new Lenis()
+
+      lenis.on('scroll', (e) => {
+      console.log(e)
+      })
+
+      function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+      }
+
+      requestAnimationFrame(raf)
+
+
+      let proxy = { skew: 0 },
+      skewSetter = gsap.quickSetter(".parallax__item__img", "skewY", "deg"), // fast
+      clamp = gsap.utils.clamp(-20, 20);
+
+      //스무스
+
       const horizon = document.querySelector("#horizontality__wrap");
       const section = gsap.utils.toArray("#horizontality__wrap > section");
 
       gsap.to(section,{
-          xPercent: -100 * (section.length - 1),
+          x: -(19504 - window.innerWidth),
           ease: "none",
           horizontal: true,
 
@@ -65,11 +85,7 @@
               pin: true,
               anticipatePin:1,
               scrub:1,
-              // snap : {
-              //     snapTo: 1/(section.length - 1),
-              //     inertoa: false,
-              //     duration: {min:0.1, max: 0.1}
-              // },
+
               invalidateOnRefresh: true
 
           }
