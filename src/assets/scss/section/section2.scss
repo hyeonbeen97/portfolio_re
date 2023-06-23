@@ -1,0 +1,19 @@
+#section2 {
+    padding: 10vh;
+   
+    .intro__text {
+        width: 100vh;
+        word-break: keep-all;
+        p {
+            font-size: 3vh;
+            margin-bottom:35vh;
+            em {
+                font-weight: bold;
+            }
+        }
+    }
+    span {
+        width: 100vh;
+        font-size: 2vh;
+    }
+}
