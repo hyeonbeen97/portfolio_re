@@ -1,71 +1,133 @@
 #section1 {
-    height: 100vh;
-    display: flex;
+  background-color: #fff;
+  width: 4800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#section1 .start__img_wrap {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 80vh;
+}
+#section1 .start__img {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  left: -5%;
+  top: -5%;
+  background-image: url(../../assets/images/section1/main_frist_img.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#section1 .circle {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  left: 390px;
+  top: 68vh;
+  text-align: center;
+  font-family: Jura;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+#section1 .desc {
+  color: #333;
+  width: 350px;
+  font-family: "IropkeBatang";
+  margin-left: 6vh;
+  margin-top: 4vh;
+  line-height: 1.5;
+}
+#section1 .desc span {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+  margin-top: 10px;
+  color: #666;
+}
+#section1 .text-wrap {
+  width: 1500px;
+  margin-left: 30vh;
+  z-index: 1;
+}
+#section1 .text-wrap > div {
+  color: #000;
+  font-size: 47vh;
+  font-family: "Cormorant Garamond";
+  line-height: 0.7;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+#section1 .text-wrap > div:nth-child(1) {
+}
+#section1 .text-wrap > div:nth-child(2) {
+  padding-left: 40vh;
+}
+#section1 .text-wrap > div:nth-child(3) {
+  padding-left: 10vh;
+}
+.porfolie__wrap {
+  display: flex;
+  .porfolie__img__wrap {
     position: relative;
+    overflow: hidden;
+    width: 700px;
+    height: 100vh;
+    .porfolie__img {
+      width: 105%;
+      height: 105vh;
+      left: -5%;
+      top: -5%;
+      background-image: url(../../assets/images/section1/myintro.jpg);
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+  }
+  .porfolie__text__wrap {
+    width: 1000px;
+    padding: 10vh 0 10vh 15vh;
+    word-break: keep-all;
 
-    .start__img {
-        width: 600px;
-        height: 70vh;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-image: url(../../images/section1/main_frist_img.png);
-    }
-    .circle {
-        position: absolute;
-        left: 500px;
-        top: 55%;
-        width: 200px;
-        height: 200px;
-        background-color: #000;
-        color: #fff;
-        font-size: 2vh;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 200px;
-        font-family: 'Jura'
-    }
-    .start__desc {
-        margin-right: 0 !important;
-        margin-left: 10vh;
-        margin-top: 8vh;
-        .desc {
-            width:45vh;
-            p {
-                font-size: 2vh;
-            }
-            span {
-                display: inline-block;
-                margin-top: 45vh;
-                font-size: 1.6vh;
-                text-align: right;
-            }
-        }
-    }
-    .text__wrap {
-        z-index: 100;
-        text-transform: uppercase;
-        font-size: 47vh;
-        line-height: 0.71;
-        font-family: "Cormorant Garamond";
-        font-weight: 100;
-        margin-left: 8vh;
-        color: #000;
+    .porfolie__text {
+      width: 100%;
+      em {
+        font-size: 3.5vh;
+        display: inline-block;
+        color: #333;
 
-        div:nth-child(1){}
-        div:nth-child(2){
-            padding-left: 40vh;
+        margin-bottom: 2%;
+        span {
+          font-size: 3.7vh;
+          font-weight: bold;
         }
-        div:nth-child(3){
-            padding-left: 14vh;
-        }
+      }
+      font-size: 2.6vh;
+      color: #333;
     }
-    .profile__img {
-        width: 100vh;
-        height: 100vh;
-        margin-left: -45vh;
-        background-repeat: no-repeat;
-        background-position: top;
-        background-image: url(../../images/section2/myintro.jpg);
-    
+    .porfolie__text_e {
+      margin-top: 35vh;
+      margin-bottom: 10vh;
+      font-size: 2vh;
+      width: 68%;
     }
+  }
+}
+
+@media (max-height: 400px) {
+  .porfolie__text__wrap {
+    width: 100px;
+  }
 }

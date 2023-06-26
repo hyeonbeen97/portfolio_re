@@ -3,3 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'IropkeBatang';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.ttf') format("truetype");
+    font-display: swap;
+}

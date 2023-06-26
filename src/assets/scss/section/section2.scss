@@ -1,19 +1,84 @@
 #section2 {
-    padding: 10vh;
-   
-    .intro__text {
-        width: 100vh;
-        word-break: keep-all;
-        p {
-            font-size: 3vh;
-            margin-bottom:35vh;
-            em {
-                font-weight: bold;
-            }
+  //   background-color: #858585;
+  width: 2000px;
+
+  .webstandard__wrap {
+    display: flex;
+    font-family: "Cormorant Garamond";
+    .webstandard__deco {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      em {
+        display: inline-block;
+        position: absolute;
+        top: -95vh;
+        left: -750%;
+        font-size: 30vh;
+        transform: rotate(270deg);
+        &::before {
+          content: "";
+          background-color: #000;
+          border: 1px solid #000;
+          height: 0.5vh;
+          width: 50vh;
+          left: -40%;
+          top: 57%;
+          position: absolute;
         }
+      }
     }
-    span {
-        width: 100vh;
-        font-size: 2vh;
+    .webstandard__img__wrap {
+      margin-left: 5%;
+      width: 800px;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+
+      .webstandard__img {
+        position: absolute;
+        left: -70%;
+        top: -5%;
+        width: 110%;
+        height: 105%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-image: url(../../assets/images/section2/web_st01.jpg);
+      }
     }
+    a {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      top: 60%;
+      left: 45%;
+      border-radius: 50%;
+      background-color: #000;
+      position: absolute;
+      text-align: center;
+      transition: all 0.3s;
+      letter-spacing: 3px;
+
+      &:hover {
+        transform: scale(90%);
+        .webstandard__circle {
+          transition: all 0.1s;
+          letter-spacing: 10px;
+          margin-left: 5%;
+          transform: rotate(360deg);
+        }
+      }
+
+      .webstandard__circle {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 30px;
+        line-height: 200px;
+      }
+    }
+
+    .webstandard__desc__wrap {
+    }
+  }
 }

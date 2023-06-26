@@ -1,44 +1,53 @@
 body {
-    background-color: var(--color_body);
-    height: 100vh;
-
-
+  overflow-x: hidden;
 }
-// horizontality__wrap
-#horizontality__wrap {
-    width: 19504px;
-    height: 100vh;
-    flex-wrap: nowrap;
-    display: flex;
+#parallax__cont {
+  scroll-behavior: none;
+  overscroll-behavior: none;
+  width: 13800px;
+  display: flex;
+  flex-wrap: nowrap;
 }
-.item {
-    position: relative;
-    height: 100vh;   
+.parallax__item {
+  height: 100vh;
+  position: relative;
 }
 
-
-
+#section3 {
+  background-color: #333;
+  width: 1000px;
+}
 #section4 {
-    width: 2000px;
-    background-color: #444;
+  background-color: #444;
+  width: 1000px;
 }
 #section5 {
-    width: 2000px;
-    background-color: #555;
+  background-color: #555;
+  width: 1000px;
 }
 #section6 {
-    width: 2000px;
-    background-color: #666;
+  background-color: #666;
+  width: 1000px;
 }
 #section7 {
-    width: 2000px;
-    background-color: #777;
+  background-color: #777;
+  width: 1000px;
 }
 #section8 {
-    width: 2000px;
-    background-color: #888;
+  background-color: #888;
+  width: 1000px;
 }
 #section9 {
-    width: 2000px;
-    background-color: #999;
+  background-color: #999;
+  width: 1000px;
+}
+
+.parallax__item__num {
+  font-size: 5vw;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-family: "Lato";
+  font-weight: 100;
+  z-index: 100;
 }
