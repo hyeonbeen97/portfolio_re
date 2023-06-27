@@ -12,7 +12,7 @@
         display: inline-block;
         position: absolute;
         top: -50vw;
-        left: -88vh;
+        left: -84.5vh;
         z-index: 1;
         font-size: 30vh;
         transform: rotate(270deg);
@@ -37,7 +37,7 @@
 
       .responsive__img {
         position: absolute;
-        left: -90%;
+        left: 0%;
         top: -5%;
         width: 110%;
         height: 105%;
@@ -61,11 +61,12 @@
       letter-spacing: 3px;
 
       &:hover {
-        transform: scale(90%);
+        background-color: #ffffff;
+
         .responsive__circle {
+          color: #64594a;
+
           transition: all 0.1s;
-          letter-spacing: 10px;
-          margin-left: 5%;
         }
       }
 
@@ -92,6 +93,7 @@
       p {
         width: 60%;
         margin-bottom: 5%;
+        font-weight: 100;
       }
 
       .sitebtn {

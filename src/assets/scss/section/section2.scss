@@ -22,8 +22,8 @@
           border: 1px solid #000;
           height: 0.5vh;
           width: 50vh;
-          left: -40%;
-          top: 57%;
+          left: -38%;
+          top: 53%;
           position: absolute;
         }
       }
@@ -54,17 +54,17 @@
       top: 60%;
       left: 45%;
       border-radius: 50%;
-      background-color: #51644a;
+      background-color: #bfd2e0;
       position: absolute;
       text-align: center;
       transition: all 0.3s;
       letter-spacing: 3px;
 
       &:hover {
-        transform: scale(90%);
+        background-color: #ffffff;
         .webstandard__circle {
-          letter-spacing: 10px;
-          margin-left: 5%;
+          transition: all 1.5s;
+          color: #bfd2e0;
           border-radius: 50%;
         }
       }
@@ -92,6 +92,7 @@
       p {
         width: 60%;
         margin-bottom: 5%;
+        font-weight: 100;
       }
 
       .sitebtn {

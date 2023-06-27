@@ -1,0 +1,25 @@
+#section4 {
+  width: 1300px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.script__start {
+  display: flex;
+  align-items: center;
+}
+
+.script__box {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  p {
+    color: #fff;
+    text-align: center;
+    line-height: 200px;
+    transform: rotate(45deg);
+    z-index: 1;
+    font-family: "Cormorant Garamond";
+  }
+}
