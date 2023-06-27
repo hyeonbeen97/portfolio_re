@@ -47,14 +47,14 @@
         background-image: url(../../assets/images/section2/web_st01.jpg);
       }
     }
-    a {
+    .webstandardsite {
       display: inline-block;
       width: 200px;
       height: 200px;
       top: 60%;
       left: 45%;
       border-radius: 50%;
-      background-color: #000;
+      background-color: #51644a;
       position: absolute;
       text-align: center;
       transition: all 0.3s;
@@ -63,10 +63,9 @@
       &:hover {
         transform: scale(90%);
         .webstandard__circle {
-          transition: all 0.1s;
           letter-spacing: 10px;
           margin-left: 5%;
-          transform: rotate(360deg);
+          border-radius: 50%;
         }
       }
 
@@ -79,6 +78,42 @@
     }
 
     .webstandard__desc__wrap {
+      width: 1000px;
+      padding-left: 20vh;
+
+      h3 {
+        font-size: 4vh;
+        font-family: jura;
+        margin-top: 15vh;
+        text-transform: uppercase;
+        margin-bottom: 3%;
+        font-weight: bold;
+      }
+      p {
+        width: 60%;
+        margin-bottom: 5%;
+      }
+
+      .sitebtn {
+        padding: 1vh 7vh;
+        border-radius: 50px;
+        height: 20px;
+        background-color: #000;
+        color: #fff;
+        font-weight: 100;
+        letter-spacing: 1px;
+      }
+      .e__desc {
+        position: absolute;
+        width: 17%;
+        top: 50%;
+        left: 70%;
+        color: #4e644a;
+        font-size: 2vh;
+        text-align: right;
+        line-height: 1.4;
+        word-break: keep-all;
+      }
     }
   }
 }
