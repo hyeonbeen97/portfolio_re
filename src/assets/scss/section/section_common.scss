@@ -1,11 +1,10 @@
 body {
-  background-color: #000;
   overflow-x: hidden;
 }
 #parallax__cont {
   scroll-behavior: none;
   overscroll-behavior: none;
-  width: 19000px;
+  width: 18000px;
   display: flex;
   flex-wrap: nowrap;
 }

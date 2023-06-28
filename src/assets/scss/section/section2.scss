@@ -1,0 +1,103 @@
+#section2 {
+    display: flex;
+    width: 1600px;
+    margin-left: -50vh;
+    position: relative;
+
+    /* 움직이는 텍스트 */
+    .animated-title {
+        position: absolute;
+        left: 0vh;
+        top: 0; 
+        transform: rotate(-90deg);
+        font-size: 30vh;
+        font-family: 'Cormorant Garamond';
+        font-weight: 500;
+        max-width: 100%;
+  text-transform: uppercase;
+        height: auto;
+    }
+    
+    .animated-title .track {
+        position: absolute;
+        white-space: nowrap;
+        will-change: transform;
+        animation: marquee 20s linear infinite;
+    }
+    
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+    
+        to {
+            transform: translateX(-50%);
+        }
+    }
+    //-----------------------------------애니메이션 끝
+    .webstandard__wrap {
+        margin-left: 50vh;
+        padding: 5vh 0;
+        .webstandard__img {
+            width: 700px;
+            overflow: hidden;
+            position: relative;
+            width: 600px;
+            height: 88vh;
+            .webstandard__imgs {
+                position: absolute;
+                width: 120%;
+                height: 110%;
+                left: -90%;
+                background-color: #483e3e;
+                background-image: url(../../assets/images/section2/web_st01.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            
+        }
+        .siteview {
+            position: absolute;
+            top: 60vh;
+            left: 125vh;
+            text-align: center;
+            line-height: 25vh;
+            color: #fff;
+            z-index: 10;
+            width: 25vh;
+            height:25vh;
+            border-radius: 50%;
+            background-color: #000;
+        }
+    }   
+    .webstandard__textwrap {
+        padding: 25vh 0;
+        margin-left: 25vh;
+        .webstandard__text {
+            h3 {
+                font-family: jura;
+                font-weight: bold;
+                font-size: 5vh;
+                margin-bottom: 5vh;
+            }
+            desc {
+                font-size: 1.8vh;
+                word-break: keep-all;
+                margin-bottom: 5vh;
+                display: inline-block;
+            }
+            p {
+                font-size: 1vh;
+                color: #959595;
+                word-break: keep-all;
+            }
+        }
+    }
+
+
+}
+
+
+
+
+

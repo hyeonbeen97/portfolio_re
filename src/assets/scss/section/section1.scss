@@ -1,6 +1,6 @@
 #section1 {
   background-color: #fff;
-  width: 4800px;
+  width: 4100px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -16,6 +16,8 @@
   height: 110%;
   left: -5%;
   top: -5%;
+      filter: saturate(0);
+
   background-image: url(../../assets/images/section1/main_frist_img.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -61,7 +63,7 @@
 }
 #section1 .text-wrap {
   width: 1500px;
-  margin-left: 30vh;
+  margin-left:15vh;
   z-index: 100;
 }
 #section1 .text-wrap > div {
@@ -81,6 +83,7 @@
   padding-left: 10vh;
 }
 .porfolie__wrap {
+  margin-left: -30vh;
   display: flex;
   .porfolie__img__wrap {
     position: relative;
@@ -102,24 +105,35 @@
   .porfolie__text__wrap {
     width: 1000px;
     padding: 10vh 0 10vh 15vh;
-    word-break: keep-all;
 
     .porfolie__text {
-      width: 100%;
-
-      em {
+      width: 60%;
+      font-size: 2.3vh;
+      color: #333;
+      p {
+        margin-bottom: 18vh;
+        em {
         font-size: 3.5vh;
         display: inline-block;
         color: #333;
-
-        margin-bottom: 2%;
-        span {
-          font-size: 3.7vh;
-          font-weight: bold;
+        margin-bottom: 5vh;
         }
       }
-      font-size: 2.6vh;
-      color: #333;
+      .porfolie__text_e {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; 
+        p {
+          width: 400px;
+          margin-right: 20vh;
+        color: #959595;
+        }
+        span {
+          width: 400px;
+        color: #959595;
+        }
+      }
+
     }
     .porfolie__text_e {
       margin-top: 35vh;
