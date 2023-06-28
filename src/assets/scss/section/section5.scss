@@ -29,6 +29,20 @@
       margin: 0 auto;
       background-color: rgba($color: #ffffff, $alpha: 0.2);
       margin-top: 13vh;
+      position: relative;
+    }
+    &::before {
+      position: absolute;
+      z-index: -100;
+      content: "";
+      top: -36vh;
+      left: -48vh;
+      width: 195vh;
+      height: 195vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../../assets/images/section6/notbomocup.png);
     }
 
     .go__site {
@@ -72,7 +86,7 @@
   animation: shine 8s infinite ease;
   animation-fill-mode: forwards;
   -webkit-text-size-adjust: none;
-  font-weight: 600;
+  font-weight: 100;
   font-size: 2vh;
   text-decoration: none;
 }
