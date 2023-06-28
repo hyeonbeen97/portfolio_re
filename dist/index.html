@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      document.documentElement.className = "js";
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script type="module" crossorigin src="/assets/index-faf9b51c.js"></script>
+    <link rel="stylesheet" href="/assets/index-f982e2c2.css">
+  </head>
+  <body>
+    <main id="parallax__cont">
+      <section id="section1" class="parallax__item">
+        <div class="start__img_wrap">
+          <div class="start__img"></div>
+        </div>
+        <div class="circle">portfolio</div>
+        <div class="desc">
+          <p>
+            어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.
+            신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며
+            세부적인 곳까지 파고드는 개발자가 되겠습니다.
+          </p>
+          <span>2022.03.04<br />김현빈</span>
+        </div>
+        <div class="text-wrap">
+          <div class="text-wrap_i"><em>I</em> am</div>
+          <div class="text-wrap_f">frontend</div>
+          <div class="text-wrap_d">DEVELOPER</div>
+        </div>
+        <div class="porfolie__wrap">
+          <div class="porfolie__img__wrap">
+            <div class="porfolie__img"></div>
+          </div>
+          <div class="porfolie__text__wrap">
+
+      </section>
+      <!-- //section1 -->
+      <section id="section2" class="parallax__item">
+      </section>
+      <!-- //section2 -->
+      <section id="section3" class="parallax__item">
+      </section>
+      <!-- //section3 -->
+      <section id="section4" class="parallax__item">
+      </section>
+      <!-- //section4 -->
+
+      <section id="section5" class="parallax__item"></section>
+      <!-- //section5 -->
+
+      <section id="section6" class="parallax__item"></section>
+      <!-- //section6 -->
+
+      <section id="section7" class="parallax__item"></section>
+      <!-- //section7 -->
+
+      <section id="section8" class="parallax__item">
+        <div class="script__php__wrap"></div>
+      </section>
+      <!-- //section8 -->
+
+      <section id="section9" class="parallax__item">
+        <span class="parallax__item__num">09</span>
+      </section>
+      <!-- //section9 -->
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+      const lenis = new Lenis();
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+
+      let sections = gsap.utils.toArray(".parallax__item");
+
+      gsap.to(sections, {
+        x: -(18600 - window.innerWidth),
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#parallax__cont",
+          pin: true,
+          scrub: 1,
+          end: "+=7000",
+          // end: document.querySelector("#parallax__cont").offsetWidth,
+        },
+      });
+      //이질감 효과
+      function scroll() {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+          document.querySelectorAll(".parallax__item").forEach((item) => {
+          const target1 = item.querySelector(".start__img");
+          const target2 = item.querySelector(".webstandard__img");
+          const target3 = item.querySelector(".responsive__img");
+
+          let offset1 = (scrollTop - item.offsetTop) * 0.2;
+          let offset2 = (scrollTop - item.offsetTop) * 0.19;
+          let offset3 = (scrollTop - item.offsetTop) * 0.1;
+
+          // target1.style.transform = `translateY(${offset1}px)`;
+          gsap.to(target1, { duration: 0.3, x: offset1 });
+          gsap.to(target2, { duration: 0.3, x: offset2 });
+          gsap.to(target3, { duration: 10, opacity: 1 });
+        });
+        requestAnimationFrame(scroll);
+      }
+      scroll();
+      const porfile = document.querySelector("porfolie__img");
+
+      // text-wrap
+      gsap.to(".text-wrap_i", {
+        duration: 3,
+        x: 800,
+        // y: -400,
+        scrollTrigger: {
+          trigger: ".text-wrap",
+          start: "left left",
+          end: "+=2000",
+          scrub: true,
+          markers: false,
+        },
+      });
+      gsap.to(".text-wrap_f", {
+        duration: 4,
+        x: -1800,
+        scrollTrigger: {
+          trigger: ".text-wrap",
+          start: "left left",
+          end: "+=3000",
+          scrub: true,
+          markers: false,
+        },
+      });
+      gsap.to(".text-wrap_d", {
+        duration: 2,
+        x: -500,
+        scrollTrigger: {
+          trigger: ".text-wrap",
+          start: "left top",
+          end: "+=2000",
+          scrub: true,
+          markers: false,
+        },
+      });
+
+      gsap.to(".webstandard__deco", {
+        duration: 6,
+        y: 580,
+        scrollTrigger: {
+          trigger: ".webstandard__deco",
+          start: "left 10%",
+          end: "+=2400",
+          scrub: true,
+          markers: false,
+        },
+      });
+      gsap.to(".responsive__deco", {
+        duration: 6,
+        y: 600,
+        scrollTrigger: {
+          trigger: ".responsive__deco",
+          start: "left 10%",
+          end: "+=4500",
+          scrub: true,
+          markers: false,
+        },
+      });
+    </script>
+  </body>
+</html>
