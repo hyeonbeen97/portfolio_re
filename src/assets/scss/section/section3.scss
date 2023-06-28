@@ -31,20 +31,21 @@
     .responsive__img__wrap {
       margin-left: 5%;
       width: 800px;
-      height: 100vh;
+      height: 105vh;
       position: relative;
       overflow: hidden;
 
       .responsive__img {
+        opacity: 0;
         position: absolute;
-        left: 0%;
-        top: -5%;
+        left: 5%;
+        top: 0%;
         width: 110%;
-        height: 105%;
+        height: 100%;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center;
-        background-image: url(../../assets/images/section2/web_st01.jpg);
+        background-position: bottom right;
+        background-image: url(../../assets/images/section3/site02.png);
       }
     }
     .responsivesite {

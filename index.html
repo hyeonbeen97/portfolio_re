@@ -126,26 +126,49 @@
 
       <section id="section5" class="parallax__item">
         <div class="script__mouse__wrap">
-          <div class="content centered">
-            <h2
-              class="content__title centered content__title--smaller narrow w400"
-              data-split
-            >
-              마우스 좌표값에 따라서 이미지가 움직이는 듯한 효과와 이미지에
-              조명이 밝혀지는 효과, 또는 이미지가 3D로 움직이는 효과를
-              주었습니다. 그리고 특정 텍스트에 마우스를 오버했을 때 이미지가
-              나타나는 효과와 글씨가 불빛이 들어오는 효과, 마우스를 따라다니는
-              도형이 바뀌는 효과를 주었습니다.
-            </h2>
+          <iframe
+            class="script__mouse__img"
+            src="https://hyeonbeen97.github.io/web2023/javascript/mouse/mouseEffect01.html"
+            frameborder="0"
+          ></iframe>
+          <h2>SCRIPT -</h2>
+          <h3>MOUSE EFFECT</h3>
+          <p class="btn-shine">
+            마우스 좌표값에 따라서 이미지가 움직이는 듯한 효과와 이미지에 조명이
+            밝혀지는 효과, 또는 이미지가 3D로 움직이는 효과를 주었습니다. 그리고
+            특정 텍스트에 마우스를 오버했을 때 이미지가 나타나는 효과와 글씨가
+            불빛이 들어오는 효과, 마우스를 따라다니는 도형이 바뀌는 효과를
+            주었습니다.
+          </p>
+          <div class="go__site">
+            <a href="#">CODE</a>
+            <a href="#">SITE</a>
           </div>
-          <div class="script__mouse__img"></div>
         </div>
-        <div class="script__game__wrap"></div>
       </section>
       <!-- //section5 -->
 
       <section id="section6" class="parallax__item">
-        <span class="parallax__item__num">06</span>
+        <div class="script__game__wrap">
+          <iframe
+            class="script__game__img"
+            src="https://game-53757.web.app/"
+            frameborder="0"
+          ></iframe>
+          <h2>SCRIPT -</h2>
+          <h3>GAME EFFECT</h3>
+          <p class="btn-shine">
+            마우스 좌표값에 따라서 이미지가 움직이는 듯한 효과와 이미지에 조명이
+            밝혀지는 효과, 또는 이미지가 3D로 움직이는 효과를 주었습니다. 그리고
+            특정 텍스트에 마우스를 오버했을 때 이미지가 나타나는 효과와 글씨가
+            불빛이 들어오는 효과, 마우스를 따라다니는 도형이 바뀌는 효과를
+            주었습니다.
+          </p>
+          <div class="go__site">
+            <a href="#">CODE</a>
+            <a href="#">SITE</a>
+          </div>
+        </div>
       </section>
       <!-- //section6 -->
 
@@ -248,13 +271,16 @@
         document.querySelectorAll(".parallax__item").forEach((item) => {
           const target1 = item.querySelector(".start__img");
           const target2 = item.querySelector(".webstandard__img");
+          const target3 = item.querySelector(".responsive__img");
 
           let offset1 = (scrollTop - item.offsetTop) * 0.2;
           let offset2 = (scrollTop - item.offsetTop) * 0.2;
+          let offset3 = (scrollTop - item.offsetTop) * 0.1;
 
           // target1.style.transform = `translateY(${offset1}px)`;
           gsap.to(target1, { duration: 0.3, x: offset1 });
           gsap.to(target2, { duration: 1, x: offset2 });
+          gsap.to(target3, { duration: 10, opacity: 1 });
         });
         requestAnimationFrame(scroll);
       }
@@ -336,61 +362,6 @@
           scrub: true, //숫자도 가능
           markers: false,
         },
-      });
-    </script>
-    <script>
-      const animateWords = (el) => {
-        // from: https://www.npmjs.com/package/split-type#splitting-text
-        // Important: The following style should be applied to all target elements. This prevents the characters from shifting slightly when text is split/reverted.
-        gsap.set(el, { "font-kerning": "none" });
-
-        // Apply SplitType
-        const st = new SplitType(el, { types: "lines, words" });
-
-        const lines = st.lines;
-        const words = st.words;
-
-        const tl = gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: el,
-              start: "center center",
-              end: "+=300%",
-              scrub: true,
-              pin: el,
-            },
-          })
-          .set(el, { perspective: 1000 });
-
-        gsap.set(lines, { transformStyle: "preserve-3d" });
-
-        tl.to(words, {
-          ease: "back.in(2)",
-          opacity: 0,
-          rotationX: (pos, _, arr) => Math.abs(pos - arr.length / 2) * -15,
-          z: -1000,
-          stagger: {
-            each: 0.03,
-            from: "center",
-          },
-        });
-      };
-
-      // GSAP Scroll Triggers
-      const scroll = () => {
-        [...document.querySelectorAll("[data-split]")].forEach((el) => {
-          animateWords(el);
-        });
-      };
-
-      // Preload images and fonts
-      preloadFonts("lce3oen").then(() => {
-        // Remove loader (loading class)
-        document.body.classList.remove("loading");
-        // Lenis (smooth scrolling)
-        initSmoothScrolling();
-        // GSAP Scroll Triggers
-        scroll();
       });
     </script>
   </body>
